@@ -1,5 +1,5 @@
-import os
 import json
+from app.core.config import get_settings
 from google import genai
 from google.genai import types
 from abc import ABC, abstractmethod
@@ -31,8 +31,9 @@ class GeminiAgente(AIAgente):
     '''
     
     def __init__(self):
-        self.api_key = os.getenv('GEMINI_API_KEY')
-        self.model_name = os.getenv('MODEL_NAME')
+        settings = get_settings()
+        self.api_key = settings.GEMINI_API_KEY
+        self.model_name = settings.MODEL_NAME
         self.client = None
         self._configurar_api(self.api_key)
     
