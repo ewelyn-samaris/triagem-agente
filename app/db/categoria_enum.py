@@ -1,0 +1,8 @@
+from enum import Enum
+
+class Categoria(Enum):
+    FINANCEIRO = 'FINANCEIRO'
+    SUPORTE_TECNICO = 'SUPORTE_TECNICO'
+    DUVIDA_GERAL = 'DUVIDA_GERAL'
+    NAO_CLASSIFICADO = 'NAO_CLASSIFICAOD'
+    OUTRO = 'OUTRO'
