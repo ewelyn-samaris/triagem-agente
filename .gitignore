@@ -1,0 +1,13 @@
+
+# ignorar variáveis de ambiente
+.env
+
+# ignorar ambientes virtuais
+.venv/
+venv/
+env/
+
+# ignorar cache
+__pycache__/
+./pytest_cache/
+.coverage
